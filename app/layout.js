@@ -16,7 +16,11 @@ export const metadata = {
   title: "School Management System | Smart Dashboard for Students & Teachers",
   description:
     "The School Management System is a comprehensive web application built with Next.js that simplifies school operations by providing an all-in-one platform for managing students, teachers, attendance, exams, and notices. Designed with a clean and responsive interface, it allows administrators to monitor daily activities, track attendance, manage class schedules, publish important updates, and generate reports effortlessly. Teachers can easily mark attendance, view student progress, and access academic data in real time, while students can stay updated on their performance, upcoming exams, and school events. Featuring modern UI components, data visualization, and secure authentication, this system ensures smooth communication between staff and students, enhancing productivity and transparency within the school environment.",
-  
+  icons: {
+    icon: "/images/icon.png",       // correct path
+    apple: "/images/icon.png",      // for Apple devices
+    shortcut: "/images/icon.png",   // shortcut icon
+  },
   keywords: [
     "School Management System",
     "Student Attendance System",
@@ -39,7 +43,7 @@ export const metadata = {
     title: "School Management System | Smart Dashboard for Students & Teachers",
     description:
       "A modern and responsive School Management System built with Next.js, designed for managing students, teachers, attendance, exams, and daily operations — all from one powerful dashboard.",
-    url: "https://school-management-frontnend.vercel.app/", // replace with your deployed URL
+    url: "https://school-management-frontnend.vercel.app", // replace with your deployed URL
     siteName: "School Management System",
     images: [
       {
