@@ -26,7 +26,7 @@ const Home = () => {
   };
 
   return (
-    <div className="w-full h-screen p-10 bg-black flex items-center justify-center">
+    <div className="w-full h-screen p-7 bg-black flex items-center justify-center">
       <form
         onSubmit={handleSubmit}
         className="w-full sm:w-[350px] text-center border border-zinc-300/60 dark:border-zinc-700 rounded-2xl px-8 bg-white dark:bg-zinc-900"
