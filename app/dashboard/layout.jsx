@@ -8,7 +8,7 @@ export default function DashboardLayout({ children }) {
       <Sidebar />
       <div className="flex-1 flex flex-col ml-0 lg:ml-64 transition-all duration-300">
         <Navbar />
-        <main className="p-6">{children}</main>
+        <main className="p-3">{children}</main>
       </div>
     </div>
   );

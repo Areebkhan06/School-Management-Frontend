@@ -159,7 +159,7 @@ const page = () => {
   return (
     <div className="w-full min-h-screen bg-black text-white flex flex-col">
       {/* Hero content */}
-      <div className="flex flex-col lg:flex-row w-full flex-1 gap-6 p-6 lg:p-8">
+      <div className="flex flex-col lg:flex-row w-full flex-1 gap-6 p-3 lg:p-8">
         {/* Left Section - Stats */}
         <div className="w-full lg:w-[70%] flex flex-col gap-6">
           {/* Stats Grid */}
