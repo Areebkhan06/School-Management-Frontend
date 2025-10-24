@@ -85,50 +85,96 @@ const AttendancePage = () => {
       : 0;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 p-4 sm:p-6 lg:p-8">
+    <div className="min-h-screen w-full bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 px-3 sm:px-6 lg:px-10 py-6">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row justify-between gap-8  bg-gradient-to-r from-slate-900/90 to-slate-800/90 p-5 rounded-lg">
-        <div className="flex items-center gap-5">
-          <div className="w-fit h-fit p-3 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl shadow-lg">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 bg-gradient-to-r from-slate-900/90 to-slate-800/90 p-4 sm:p-6 rounded-xl border border-slate-700/50">
+        {/* Title Section */}
+        <div className="flex items-center gap-4 w-full">
+          <div className="p-3 sm:p-4 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl shadow-lg shrink-0">
             {role === "student" ? (
-              <GraduationCap className="w-8 h-8 text-white" />
+              <GraduationCap className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
             ) : (
-              <Users className="w-8 h-8 text-white" />
+              <Users className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
             )}
           </div>
-          <div className="w-full">
-            <h1 className="text-3xl font-bold text-white">
+          <div className="flex-1 min-w-0">
+            <h1 className="text-2xl sm:text-3xl font-bold text-white truncate">
               {role === "student" ? "Student Attendance" : "Teacher Attendance"}
             </h1>
-            <p className="text-slate-400 text-sm mt-1 whitespace-nowrap">
+            <p className="text-slate-400 text-sm sm:text-base mt-1">
               Manage daily attendance records
             </p>
           </div>
         </div>
 
-        <div className="flex items-center gap-3 bg-slate-800 p-1.5 rounded-xl">
+        {/* Role Toggle */}
+        <div className="flex items-center gap-2 sm:gap-3 bg-slate-800/60 p-1.5 rounded-xl w-full sm:w-auto justify-center">
           <button
             onClick={() => setRole("student")}
-            className={`px-5 py-2.5 rounded-lg transition-all duration-200 font-medium flex items-center gap-2 ${
+            className={`flex-1 sm:flex-none px-4 sm:px-5 py-2.5 rounded-lg transition-all duration-200 font-medium flex items-center justify-center gap-2 ${
               role === "student"
-                ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg"
+                ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md"
                 : "text-slate-400 hover:text-white hover:bg-slate-700/50"
             }`}
           >
             <GraduationCap className="w-4 h-4" />
-            Students
+            <span className="hidden sm:inline">Students</span>
           </button>
           <button
             onClick={() => setRole("teacher")}
-            className={`px-5 py-2.5 rounded-lg transition-all duration-200 font-medium flex items-center gap-2 ${
+            className={`flex-1 sm:flex-none px-4 sm:px-5 py-2.5 rounded-lg transition-all duration-200 font-medium flex items-center justify-center gap-2 ${
               role === "teacher"
-                ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg"
+                ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md"
                 : "text-slate-400 hover:text-white hover:bg-slate-700/50"
             }`}
           >
             <Users className="w-4 h-4" />
-            Teachers
+            <span className="hidden sm:inline">Teachers</span>
           </button>
+        </div>
+      </div>
+
+      {/* Attendance Stats */}
+      <div className="w-full mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {/* Present */}
+        <div className="flex items-center justify-between bg-gradient-to-br from-green-500/10 to-green-600/5 hover:from-green-500/30 backdrop-blur-xl rounded-xl border border-green-500/20 p-4 sm:p-5 transition duration-300">
+          <div>
+            <h2 className="text-green-400 text-xs sm:text-sm font-medium uppercase tracking-wide">
+              Present
+            </h2>
+            <p className="text-2xl sm:text-3xl font-bold text-white mt-2">0</p>
+          </div>
+          <div className="p-3 bg-green-500/20 rounded-lg">
+            <CheckCircle2 className="w-7 h-7 sm:w-8 sm:h-8 text-green-400" />
+          </div>
+        </div>
+
+        {/* Absent */}
+        <div className="flex items-center justify-between bg-gradient-to-br from-red-500/10 to-red-600/5 hover:from-red-500/30 backdrop-blur-xl rounded-xl border border-red-500/20 p-4 sm:p-5 transition duration-300">
+          <div>
+            <h2 className="text-red-400 text-xs sm:text-sm font-medium uppercase tracking-wide">
+              Absent
+            </h2>
+            <p className="text-2xl sm:text-3xl font-bold text-white mt-2">0</p>
+          </div>
+          <div className="p-3 bg-red-500/20 rounded-lg">
+            <XCircle className="w-7 h-7 sm:w-8 sm:h-8 text-red-400" />
+          </div>
+        </div>
+
+        {/* Attendance Rate */}
+        <div className="flex items-center justify-between bg-gradient-to-br from-blue-500/10 to-blue-600/5 hover:from-blue-500/30 backdrop-blur-xl rounded-xl border border-blue-500/20 p-4 sm:p-5 transition duration-300">
+          <div>
+            <h2 className="text-blue-400 text-xs sm:text-sm font-medium uppercase tracking-wide">
+              Attendance Rate
+            </h2>
+            <p className="text-2xl sm:text-3xl font-bold text-white mt-2">
+              45%
+            </p>
+          </div>
+          <div className="p-3 bg-blue-500/20 rounded-lg">
+            <TrendingUp className="w-7 h-7 sm:w-8 sm:h-8 text-blue-400" />
+          </div>
         </div>
       </div>
     </div>
