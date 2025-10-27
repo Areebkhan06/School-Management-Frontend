@@ -14,11 +14,10 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "plugins": [{ "name": "next" }],
-    "baseUrl": ".",                   // still works fine for now
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]
     },
-    "ignoreDeprecations": "6.0",      // ✅ added this line
     "forceConsistentCasingInFileNames": true
   },
   "include": [
