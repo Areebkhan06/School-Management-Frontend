@@ -36,7 +36,7 @@ const Sidebar = () => {
         <button
           aria-label="Toggle menu"
           onClick={() => setIsOpen(!isOpen)}
-          className="p-2 rounded-lg bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 text-white border border-gray-700 hover:border-cyan-500 transition-all duration-300"
+          className="p-2 rounded-lg bg-linear-to-r from-slate-950 via-slate-900 to-slate-950 text-white border border-gray-700 hover:border-cyan-500 transition-all duration-300"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -57,7 +57,7 @@ const Sidebar = () => {
         className={`fixed top-0 left-0 h-screen w-64 z-50 transform transition-transform duration-300 ease-in-out
           ${isOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0`}
       >
-        <div className="h-full w-full flex flex-col bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 shadow-2xl border-r border-gray-800/50">
+        <div className="h-full w-full flex flex-col bg-linear-to-b from-slate-950 via-slate-900 to-slate-950 shadow-2xl border-r border-gray-800/50">
           {/* Logo / header */}
           <div className="relative flex items-center justify-between gap-3 py-6 px-4 border-b border-gray-800/50">
             <div>
@@ -86,16 +86,16 @@ const Sidebar = () => {
                   onClick={() => setIsOpen(false)}
                   className={`group relative flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-300 overflow-hidden ${
                     isActive
-                      ? "bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/30"
+                      ? "bg-linear-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/30"
                       : "text-gray-400 hover:text-gray-200"
                   }`}
                 >
                   {!isActive && (
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-linear-to-r from-cyan-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   )}
 
                   <div
-                    className={`relative p-2 rounded-lg transition-all duration-300 flex-shrink-0 ${
+                    className={`relative p-2 rounded-lg transition-all duration-300 shrink-0 ${
                       isActive ? "bg-white/20" : "bg-gray-800/40 group-hover:bg-gray-700/60"
                     }`}
                   >

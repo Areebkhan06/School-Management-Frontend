@@ -1,5 +1,6 @@
+// app/sitemap.js
 export default function sitemap() {
-  const baseUrl = "https://school-management-frontend-self.vercel.app";
+  const baseUrl = "https://school-management-frontend-eosin.vercel.app";
 
   return [
     {
@@ -20,6 +21,3 @@ export default function sitemap() {
     },
   ];
 }
-
-
-// google-site-verification=xzL5JSHfnuEyqMWEUY_EUrUp2D30jX4N9pFDLfyUabk

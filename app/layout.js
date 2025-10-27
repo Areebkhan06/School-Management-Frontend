@@ -43,7 +43,7 @@ export const metadata = {
     title: "School Management System | Smart Dashboard for Students & Teachers",
     description:
       "A modern and responsive School Management System built with Next.js, designed for managing students, teachers, attendance, exams, and daily operations — all from one powerful dashboard.",
-    url: "https://school-management-frontnend.vercel.app", // replace with your deployed URL
+    url: "https://school-management-frontend-eosin.vercel.app", // replace with your deployed URL
     siteName: "School Management System",
     images: [
       {
@@ -53,7 +53,7 @@ export const metadata = {
         alt: "School Management System Dashboard",
       },
     ],
-    locale: "en_US",
+    locale: "en_IN",
     type: "website",
   },
 
