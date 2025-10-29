@@ -1,4 +1,6 @@
 // app/sitemap.js
+export const dynamic = 'force-static'; // 👈 important for static generation
+
 export default function sitemap() {
   const baseUrl = "https://school-management-frontend-eosin.vercel.app";
 
