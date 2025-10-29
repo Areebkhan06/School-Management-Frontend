@@ -173,11 +173,11 @@ const Hero = () => {
               return (
                 <div
                   key={idx}
-                  className="group relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 cursor-pointer overflow-hidden"
+                  className="group relative bg-linear-to-br from-gray-900 to-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 cursor-pointer overflow-hidden"
                 >
                   {/* Gradient background effect */}
                   <div
-                    className={`absolute inset-0 opacity-0 group-hover:opacity-10 bg-gradient-to-br ${stat.color} transition-opacity duration-300`}
+                    className={`absolute inset-0 opacity-0 group-hover:opacity-10 bg-linear-to-br ${stat.color} transition-opacity duration-300`}
                   />
 
                   <div className="relative z-10 flex items-start justify-between">
@@ -190,7 +190,7 @@ const Hero = () => {
                       </h3>
                     </div>
                     <div
-                      className={`bg-gradient-to-br ${stat.color} p-3 rounded-xl`}
+                      className={`bg-linear-to-br ${stat.color} p-3 rounded-xl`}
                     >
                       <Icon className="w-6 h-6 text-white" />
                     </div>
@@ -305,12 +305,12 @@ const Hero = () => {
             </div>
           </div>
           {/* -------------NOTICE----------------------- */}
-          <div className="h-fit bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 p-6">
+          <div className="h-fit bg-linear-to-br from-slate-950 via-slate-900 to-slate-950 p-6">
             <div className="">
               {/* Header */}
               <div className="mb-8">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-1 h-8 bg-gradient-to-b from-cyan-400 to-cyan-600 rounded-full"></div>
+                  <div className="w-1 h-8 bg-linear-to-b from-cyan-400 to-cyan-600 rounded-full"></div>
                   <h2 className="text-3xl font-bold text-white">
                     Notice Board
                   </h2>
@@ -325,14 +325,14 @@ const Hero = () => {
                 {notices.map((notice) => (
                   <div
                     key={notice.id}
-                    className="group relative bg-gradient-to-r from-slate-900/50 to-slate-800/30 backdrop-blur-sm border border-gray-700/50 rounded-lg p-4 hover:border-cyan-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10"
+                    className="group relative bg-linear-to-r from-slate-900/50 to-slate-800/30 backdrop-blur-sm border border-gray-700/50 rounded-lg p-4 hover:border-cyan-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10"
                   >
                     {/* Hover glow effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/0 via-cyan-600/0 to-cyan-600/0 group-hover:from-cyan-600/5 group-hover:via-cyan-600/5 group-hover:to-cyan-600/5 rounded-lg transition-all duration-300"></div>
+                    <div className="absolute inset-0 bg-linear-to-r from-cyan-600/0 via-cyan-600/0 to-cyan-600/0 group-hover:from-cyan-600/5 group-hover:via-cyan-600/5 group-hover:to-cyan-600/5 rounded-lg transition-all duration-300"></div>
 
                     <div className="relative flex gap-4">
                       {/* Image */}
-                      <div className="relative flex-shrink-0">
+                      <div className="relative shrink-0">
                         <img
                           src={notice.image}
                           alt={notice.title}
@@ -347,7 +347,7 @@ const Hero = () => {
                         </h3>
 
                         <div className="flex items-center gap-2 mt-2 text-sm text-gray-400">
-                          <User size={14} className="flex-shrink-0" />
+                          <User size={14} className="shrink-0" />
                           <span>
                             <span className="text-gray-200 font-medium">
                               {notice.postedBy}
@@ -379,9 +379,9 @@ const Hero = () => {
         {/* Right Section - Announcements & Messages */}
         <div className="w-full min-h-[50%] lg:w-[30%] flex flex-col gap-6">
           {/* Announcements Card */}
-          <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/10">
+          <div className="bg-linear-to-br from-gray-900 to-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/10">
             <div className="flex items-center gap-3 mb-6">
-              <div className="bg-gradient-to-br from-purple-500 to-pink-500 p-2 rounded-lg">
+              <div className="bg-linear-to-br from-purple-500 to-pink-500 p-2 rounded-lg">
                 <Bell className="w-5 h-5 text-white" />
               </div>
               <h3 className="text-xl font-bold">Announcements</h3>
@@ -408,9 +408,9 @@ const Hero = () => {
           </div>
 
           {/* Messages Card */}
-          <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10">
+          <div className="bg-linear-to-br from-gray-900 to-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10">
             <div className="flex items-center gap-3 mb-6">
-              <div className="bg-gradient-to-br from-cyan-500 to-blue-500 p-2 rounded-lg">
+              <div className="bg-linear-to-br from-cyan-500 to-blue-500 p-2 rounded-lg">
                 <MessageSquare className="w-5 h-5 text-white" />
               </div>
               <h3 className="text-xl font-bold">Messages from Students</h3>
@@ -434,13 +434,13 @@ const Hero = () => {
               ))}
             </div>
 
-            <button className="w-full mt-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300">
+            <button className="w-full mt-4 py-2 bg-linear-to-r from-cyan-500 to-blue-500 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300">
               View All Messages
             </button>
           </div>
 
           {/* ----------------------- */}
-          <div className="w-full lg:w-[25vw] bg-gradient-to-b from-gray-900 to-gray-800 rounded-xl shadow-xl border border-gray-800 p-4 flex flex-col gap-6 overflow-y-auto">
+          <div className="w-full lg:w-[25vw] bg-linear-to-b from-gray-900 to-gray-800 rounded-xl shadow-xl border border-gray-800 p-4 flex flex-col gap-6 overflow-y-auto">
             {/* Upcoming Events / Holidays */}
             <div>
               <h2 className="flex items-center gap-2 text-cyan-400 font-semibold text-lg mb-3">
